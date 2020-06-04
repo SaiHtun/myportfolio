@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Badass Web Developer">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Vue.js, Node.js, Mongodb, Firebase, Express, Netlify, Heroku, Vercel, Zeit">
+  <meta name="author" content="John Doe">
+  <title>Sai WebDev</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://kit.fontawesome.com/4354884a29.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <!-- slick.js -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- animate css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <nav class="main-navbar">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a id="brand"><i class="fas fa-cat fa-2x"></i></a>
+              <ul class="nav-list">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#inspirations">Inspirations</a></li>
+                <li><a href="#feedbacks">Feedbacks</a></li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+    <main class="snap-controller" >
+      <section id="hero" class="hero container">
+        <div class="hero-info">
+          <p>I'm <span style="font-weight: bold; font-size: 1.2em; color: #54BB84;">SAI</span>, a self-taught <span style="font-weight: bold; font-size: 1.2em; color: #EAD64D;">Web</span> Developer , <span style="font-weight: bold; font-size: 1.2em; color: skyblue;">Cloud</span> enthusiast, <span style="font-weight: bold; font-size: 1.2em; color: #E44E32;">Designer</span>, <span style="font-weight: bold; font-size: 1.2em; color: #54BB84;">Music</span> and 🐶<span style="font-weight: bold; font-size: 1.2em; color: pink;"> lover</span>.</p>
+          <ul class="personal-media">
+            <li><a href="https://github.com/saihtun" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
+            <li><a href="https://www.facebook.com/saihtun1430"  target="_blank"><i style="color: #4267B2; background-color: white;" class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="https://twitter.com/SaiHtun19428970"  target="_blank"><i style="color: #2877B5;" class="fab fa-twitter-square fa-lg"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sai-htun-b20a0611a/"  target="_blank"><i style="color: #2877B5; background-color: white;" class="fab fa-linkedin fa-lg"></i></a></li>
+          </ul>
+          <div class="cv">
+            <a style="color: white;" href="./assets/sai's CV.pdf" download><i style="position: absolute; top: 30%; left: 20px;" class="fas fa-file-download fa-lg"></i></a>
+            <div @click="moveCV = !moveCV" class="download-cv" :class="{moveCV: moveCV}">Download CV</div>
+          </div>
+        </div>
+        <div class="profile-pic">
+          <img src="./assets/sail.jpg" class="responsive"  alt="sai's profile">
+        </div>
+        <!-- nav panel -->
+        <div class="nav-panel" :class="{movePanel: openNavigator}">
+          <div class="nav-pic">
+            <img src="./assets/sail.jpg" alt="#">
+          </div>
+          <ul class="nav-list navs">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#inspirations">Inspirations</a></li>
+            <li><a href="#feedbacks">Feedbacks</a></li>
+          </ul>
+        </div>
+
+        <div @click="openNavigator = !openNavigator" class="navArrow"><i :class="{rotatePanel: openNavigator}" style="color: white; font-size: 1.5em;" class="fas fa-angle-double-left leftArrow" ></i></div>
+      
+      </section>
+      <!-- about me -->
+      <section id="about" class="about">
+        <div class="bg-about"></div>
+        <div class="about-wrapper container">
+          <h2 class="title">More About Me</h2>
+          <p style="width: 90%; margin: auto; margin-bottom: 10px;"> 
+            Thanks for getting to know me more,  I’m Sai, 27 years old. I’ve been 
+            working in management industry for many years but decided to change my career 
+            path to IT last year, expertise in Window Server and VMware virtualization technology,
+            i used to work as a system support intern for 3 months just right before i moved to United State.
+          </p>
+          <p style="width: 90%; margin: auto; margin-bottom: 10px;">
+            I was a little bit of unfortunate that I couldn’t able to work for quite a few months due to the pandemic and the authority were delayed to issued my work permit but thankfully because of that I had the opportunity to learn myself to code which I always thought coding is not for ordinary people like me. I intended to join the coding bootcamp at Hack Reactor and was qualified for  “Software Engineering Immersive Program” but due to the pandemic and financial problem I decided to drop out and taught myself to code,  I love coding and enjoy every single experiences from wire framing to Front-to-Back development process, Currently i'm looking for a job opportunity either as a junior software developer or internship, i just wanna dive to it and get my hands dirty, please do let me know if any related postions are opening, your helps are much appreciated. I’ll be keep creating simple and beautiful webapp so please do visit often and explore my projects, see you around.
+          </p>  
+      </section> 
+      <!-- Skills -->
+      <section id="skills" class="skills container">
+        <h2 class="title">Skills</h2>
+        <div class="category-title">
+          <h2 :class="{selected: selectedComponent === 'front'}" @click="selectedComponent = 'front'">Frontend</h2>
+          <h2 :class="{selected: selectedComponent === 'back'}" @click="selectedComponent = 'back'">Backend</h2>
+          <h2 :class="{selected: selectedComponent === 'cloud'}" @click="selectedComponent = 'cloud'">Cloud</h2>
+        </div>
+        <div class="icons-compo">
+          <transition name="slide">
+            <component :is="selectedComponent"></component>
+          </transition>
+        </div>
+      </section>
+      <!-- projects / use materialize tabs-->
+      <section id="projects" class="projects">
+        <div class="container" style="height: 100vh;">
+          <h4 class="title">Projects</h4>
+          <div class="projects-title">
+            <h2 :class="{selectedProject: selectedProjectComponent === 'landingPage'}" @click="selectedProjectComponent = 'landingPage'">LandingPage</h2>
+            <h2 :class="{selectedProject: selectedProjectComponent === 'fullStacks'}" @click="selectedProjectComponent = 'fullStacks'">FullStacks</h2>
+            <h2 :class="{selectedProject: selectedProjectComponent === 'challenges'}" @click="selectedProjectComponent = 'challenges'">Challenges</h2>
+          </div>
+          <div class="panel container">
+            <transition name="slide"  class="shake">
+              <component :is="selectedProjectComponent"></component>
+            </transition>
+          </div>
+        </div>
+      </section>
+      <!-- inspirations / materialize slider-->
+      <section id="inspirations" class="inspirations">
+        <h4 class="title">Inspirations</h4>
+        <div class="inspi-wrapper container">
+          <div class="slider">
+            <div><a href="https://www.youtube.com/channel/UCLNgu_OupwoeESgtab33CCw" target="_blank"><p>CJ Reynolds</p><img src="./assets/cj.jpg" alt="sir"></a></div>
+            <div><a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="_blank"><p>Shaun Pelling</p><img src="./assets/netninja.jpg" alt="sir"></a></div>
+            <div><a href="https://www.youtube.com/user/TechGuyWeb" target="_blank"><p>Brad Traversy</p><img src="./assets/brad.jpg" alt="sir"></a></div>
+            <div><a href="https://www.youtube.com/user/shiffman" target="_blank"><p>Daniel Shiffman</p><img src="./assets/train.jpg" alt="sir"></a></div>
+            <div><a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank"><p>Dev Ed</p><img src="./assets/ed.jpg" alt="sir"></a></div>
+          </div>
+          <div class="inspirations-info">
+            <p>First of all, i would like to say thank u to all those amazing people that i'm always look up to, thanks for providing brillient resources and all the hard works, u guys are like my high school friends who can literally save my ass just very right before the exam, so i just create a little carousels just to show my gratitude towards u all, for those people who are reading this please do check out their channel and amazing works, i've embeded the link in each carousel just simply click it and u won't be ever regret it. By the way i don't know if it's the right way to showcase something like that, if not please please do let me know.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Feedbacks / use Firebase -->
+      <section id="feedbacks" class="feedbacks">
+        <h4 class="title">Feedbacks</h4>
+        <div v-if="!show" class="feeds">
+          <div v-for="(feed,index) in feeds" :key="index" style="border-bottom: 1px solid teal;" class="feedback">
+            <p><span style="font-weight: bold; font-style: italic;">{{feed.name}} :</span> {{feed.message}}</p>
+            <p class="star"  style="font-weight: bold; font-style: italic;">-Rating: {{feed.rating}}</p>
+          </div>
+          
+        </div>
+        <button v-if="!show" @click="show = !show" class="btn-feedback">+ Add Feedbacks</button>
+          <form @submit.prevent="submit" v-if="show" class="feedsForm">
+            <input v-model="feedback.name" type="text" placeholder="Name" required>
+            <select v-model="feedback.rating" required>
+                <option value="">Rating</option>
+                <option value="⭐️">⭐️</option>
+                <option value="⭐️⭐️">⭐️⭐️</option>
+                <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>ß
+                <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+                <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+            </select>
+            <textarea v-model="feedback.message" name="message" id="" cols="30" rows="10" placeholder="Add your feedback here.." required></textarea>
+            <button class="btn-submit" type="submit">Submit</button>
+          </form>
+        <button v-if="show" @click="show = !show" class="btn-close">Close Form</button>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="main-footer">
+      <p class="sai">Crafted with <span style="margin-right: 6px;">❤️</span>  by SAI</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
